@@ -153,6 +153,15 @@ a:hover { text-decoration: underline; }
     
 }
 
+@media screen and (max-width: 480px) {
+    .row .col-00 { min-width: 240px; }
+}
+
+@media screen and (max-width: 240px) {
+    .row .col-00 { min-width: 120px; }
+}
+
+
 /* CURRICULUM VITAE - who I'am:
  * ========================================================================== */
 
@@ -179,6 +188,7 @@ a:hover { text-decoration: underline; }
 #iam .infor p a { color: #fff; }
 
 @media screen and (max-width: 820px) {
+    #iam { margin-bottom: 1em; }
     #iam h1 { margin-top: 1em; }
     #iam hr { display: none; }
 }
@@ -222,7 +232,6 @@ a:hover { text-decoration: underline; }
     position: relative;
     height: 4px;
     width: 100%;
-    min-width: 160px;
     margin: 2px 0px 1em 0px;
     overflow: hidden;
     -webkit-border-radius: 2px;
