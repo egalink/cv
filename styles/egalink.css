@@ -40,13 +40,23 @@ html {
     line-height: 1.32em;
     color: rgba(0, 0, 0, 0.64);
 }
-body { background-color: #fafafa; }
+body {
+    background-color: #fafafa;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+hr.dashed { border-style: dashed; }
+hr.dotted { border-style: dotted; }
+
 
 h1, h2, h3, h4, h5, h6, p { margin: 1em auto; }
 
 section,
 article { position: relative; }
-section { padding: 1em 0; overflow: hidden; }
+section { padding: 0; overflow: hidden; }
 
 a:active {}
 a { color: #4791bd; text-decoration: none; }
@@ -56,19 +66,15 @@ a:hover { text-decoration: underline; }
 /* ESTRUCTURA DEL SITIO:
  * ========================================================================== */
 
-.container { margin: auto; max-width: 800px; }
+.container { margin: 0 auto; max-width: 780px; }
 .wrapper { padding: 1em; }
 .content {
     overflow: hidden;
     -webkit-border-radius: 3px;
             border-radius: 3px;
 }
-.content .bluesbg { background-color: #4791bd; }
-.content .whitebg { background-color: #fff; }
-.content .greenbg { background-color: #c9f3ca; }
 
 .content .infor {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
     padding: 0.5em 1em;
     padding-left: 3.4375em;
     position: relative;
@@ -93,72 +99,82 @@ a:hover { text-decoration: underline; }
 .content p .position .period { float: right; }
 
 
+.cv-page {
+    /*background-color: green;/***/
+    max-width: 21.6cm;
+    max-height: calc(27.9cm *1);
+    margin: 0 auto;
+    overflow: hidden;
+}
+.cv-page .container { margin: 1.16em auto; }
+
+.cv-page .sidebar,
+.cv-page .contain { height: calc(27.9cm *1 - 1.16em *2); }
+.cv-page .sidebar .content,
+.cv-page .contain .content {
+    min-height: 100%;
+    -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.12), 0px 2px 10px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.12), 0px 2px 10px 0 rgba(0, 0, 0, 0.06);
+}
+
+.cv-page .sidebar .content { background-color: #4791bd; }
+.cv-page .sidebar h1 { font-size: 24px; line-height: 1.32em; }
+.cv-page .sidebar h2 { font-size: 12px; font-weight: 400; }
+.cv-page .sidebar h3 { font-size: 20px; font-weight: 500; }
+.cv-page .sidebar h4 { font-size: 16px; font-weight: 500; }
+.cv-page .sidebar ul { font-size: 12px; font-weight: 400; }
+.cv-page .sidebar p  { font-size: 12px; font-weight: 300; }
+.cv-page .sidebar hr { border-bottom-color: #3e80a7; }
+
+.cv-page .contain .content { background-color: #fff; }
+.cv-page .contain h4 { font-size: 20px; font-weight: 500; }
+.cv-page .contain h5 { font-size: 14px; font-weight: 500; }
+.cv-page .contain h6 { font-size: 12px; font-weight: 400; }
+.cv-page .contain ul { font-size: 12px; font-weight: 400; }
+.cv-page .contain p  { font-size: 12px; font-weight: 300; }
+.cv-page .contain hr { border-bottom-color: #efefef; }
+/***/
+
 /* CURRICULUM VITAE - who I'am:
  * ========================================================================== */
 
 #iam {}
-#iam .content {
-    -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.12), 0px 2px 10px 0 rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.12), 0px 2px 10px 0 rgba(0, 0, 0, 0.06);
-}
-#iam h1 { font-size: 24px; line-height: 1.32em; }
-#iam h2 { font-size: 13px; font-weight: 400; }
-#iam h3 { font-size: 20px; font-weight: 500; }
-#iam h4 { font-size: 16px; font-weight: 500; margin-top: 32px; }
-#iam p  { font-size: 12px; }
-#iam .bluesbg h3,
-#iam .bluesbg h4,
-#iam .bluesbg p,
-#iam .bluesbg p a { color: #fff; }
-
+#iam .content {}
+#iam h1 { margin-top: 0px; }
+#iam h2 b { font-size: 14px; letter-spacing: 1px; }
 #iam .about {
+    background-color: #fff;
     position: relative;
     text-align: center;
 }
 #iam .photo {
-    background-color: #f0f0f0;
+    background-color: #fff;
+    padding-top: 2em;
     position: relative;
 }
-#iam .photo img {
-    width: 100%;
-    height: auto;
-}
+
+#iam .infor h3,
+#iam .infor h4,
+#iam .infor p,
+#iam .infor p a { color: #fff; }
 
 
 /* CURRICULUM VITAE - Work experience:
  * ========================================================================== */
 
-#experience { margin: -24px auto; }
-#experience .content {
-    margin: 24px auto;
-    background-color: #fff;
-}
-#experience h4 { font-size: 24px; font-weight: 500; }
-#experience h5 { font-size: 18px; font-weight: 500; margin-top: 16px; }
-#experience h6 { font-size: 14px; font-size: 400; }
-#experience p  { font-size: 14px; font-weight: 300; }
-
-#experience .content .greenbg p {
-    color: #607d61;
-    font-size: 16px;
-    margin: 0 auto;
-    margin-bottom: 6px;
-    letter-spacing: 1px;
+#exp .content {}
+#exp h4 {
+    color: #4791bd;
+    margin-bottom: 0px;
 }
 
-#experience .bluesbg h3,
-#experience .bluesbg h4,
-#experience .bluesbg h5,
-#experience .bluesbg h6,
-#experience .bluesbg p,
-#experience .bluesbg p a { color: #fff; }
-
-#experience .work { 
+#exp .infor { padding: 0.5em 3.4375em; }
+#exp .work { 
     position: relative;
     margin-top: 32px;
 }
-#experience .work h6 { margin-bottom: 0px; }
-#experience .work p  { margin-top: 0px; }
+#exp .work h6 { margin-bottom: 0px; }
+#exp .work p  { margin-top: 0px; }
 
 
 /* DOT separator:
@@ -177,7 +193,7 @@ a:hover { text-decoration: underline; }
  * ========================================================================== */
 
 .progress {
-    background-color: rgb(64, 131, 171);
+    background-color: #f0f0f0;
     display: block;
     position: relative;
     height: 4px;
@@ -188,7 +204,7 @@ a:hover { text-decoration: underline; }
             border-radius: 2px;
 }
 .progress .determinate {
-    background-color: #fff;
+    background-color: #4083ab;
     top: 0px;
     left: 0px;
     bottom: 0px;
@@ -199,6 +215,7 @@ a:hover { text-decoration: underline; }
          -o-transition: width 0.3s linear;
             transition: width 0.3s linear;
 }
+
 
 /* BOTÓNES:
  * ========================================================================== */
@@ -436,8 +453,8 @@ img.img-responsive {
 }
 
 img.img-bordered {
-    background-color: rgba(71, 145, 189, 0.64);
-    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 3px;
     -webkit-border-radius: 2px;
             border-radius: 2px;
 }
@@ -450,7 +467,7 @@ img.img-rounded {
 
 .test, .test * { outline: 1px solid red; outline-offset: -1px; }
 
-.clearfix.line { margin: 32px auto; }
+.clearfix.line { margin: 1em auto; }
 .clearfix.line:before {
     display: block;
     content: '';

@@ -1,0 +1,11 @@
+
+body { -webkit-print-color-adjust: exact; }
+
+.cv-page .sidebar .content,
+.cv-page .contain .content {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.y-print { display: block; }
+.n-print { display: none; }
