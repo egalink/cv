@@ -196,19 +196,18 @@ a:hover { text-decoration: underline; }
 /* CURRICULUM VITAE - Work experience:
  * ========================================================================== */
 
-#exp .content {}
+/*#exp .content {}*/
 #exp h4 {
     color: #4791bd;
     margin-bottom: 0px;
 }
 
-#exp .infor { padding: 0.5em 3.4375em; }
-#exp .work { 
+#exp .infor { padding: 0.064em 3.4375em; }
+#exp .card { 
     position: relative;
-    margin-top: 32px;
 }
-#exp .work h6 { margin-bottom: 0px; }
-#exp .work p  { margin-top: 0px; }
+#exp .card h5 { margin-bottom: 0px; }
+#exp .card p  { margin-top: 0px; }
 
 
 /* DOT separator:
@@ -227,7 +226,7 @@ a:hover { text-decoration: underline; }
  * ========================================================================== */
 
 .progress {
-    background-color: #f0f0f0;
+    background-color: #d1d1d1;
     display: block;
     position: relative;
     height: 4px;
