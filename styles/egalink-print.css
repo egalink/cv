@@ -1,11 +1,80 @@
+/* ============================================================================
+   PRINT STYLES FOR PDF - Optimized for compatibility
+   ========================================================================== */
 
-body { -webkit-print-color-adjust: exact; }
-
-.cv-page .sidebar .content,
-.cv-page .contain .content {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+@page {
+    size: letter;
+    margin: 0.5in;
 }
 
-.y-print { display: block; }
-.n-print { display: none; }
+body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+.cv-container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    background: white;
+}
+
+/* Ensure sections stay on page */
+.cv-section {
+    page-break-inside: avoid;
+}
+
+.experience-item {
+    page-break-inside: avoid;
+}
+
+.education-item {
+    page-break-inside: avoid;
+}
+
+.skill-column {
+    page-break-inside: avoid;
+}
+
+/* Remove shadows and problematic styles */
+* {
+    box-shadow: none !important;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+a[href]:after {
+    content: '';
+}
+
+/* Hide screen-only elements */
+.no-print {
+    display: none !important;
+}
+
+/* Typography for print */
+h1, h2, h3, h4, h5, h6 {
+    orphans: 2;
+    widows: 2;
+    page-break-after: avoid;
+}
+
+p, li {
+    orphans: 2;
+    widows: 2;
+}
+
+/* Ensure proper spacing */
+.cv-header {
+    page-break-after: avoid;
+}
+
+.cv-main {
+    width: 100%;
+}
